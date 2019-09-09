@@ -1,0 +1,26 @@
+{
+  "name": "Xbitpay",
+  "version": "1.3.0",
+  "description": "用户端",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tangqq/Xbitpay.git"
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "packageDarwin": "electron-packager ./ Xbitpay --platform=darwin --arch=x64  --out=./dist  --asar --app-version=1.0.0 --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config*|node_modules)\"",
+    "packageWin": "electron-packager ./ Xbitpay --platform=win32 --arch=x64  --out=./dist --icon=./favicon.ico --asar --app-version=1.2 --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config.js)\"",
+    "packageLinux": "electron-packager ./ Xbitpay --platform=linux --arch=x64 --out=./dist --icon=./favicon.ico --asar --app-version=1.0.0 --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config.js|node_modules)\"",
+    "package": "npm run packageDarwin && npm run packageWin && npm run packageLinux"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6.0.7",
+    "electron-winstaller": "^4.0.0"
+  },
+  "dependencies": {
+    "update-electron-app": "^1.5.0"
+  }
+}
